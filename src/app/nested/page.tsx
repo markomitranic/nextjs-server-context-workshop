@@ -1,12 +1,15 @@
 import { LocaleContextProvider } from "@/context/LocaleContext/LocaleContextProvider";
 import { ClientComponent } from "./ClientComponent";
 import { ServerComponent } from "./ServerComponent";
+import { UserContextProvider } from "@/context/UserContext/UserContextProvider";
 
-export default async function Home() {
+export default function Home() {
   return (
     <LocaleContextProvider locale={"en-GB"}>
-      <ClientComponent />
-      <ServerComponent />
+      <UserContextProvider user={{id: "1", name: "Marko", cpr: "0101010101"}}>
+        <ClientComponent />
+        <ServerComponent />
+      </UserContextProvider>
     </LocaleContextProvider>
   );
 }
