@@ -21,6 +21,7 @@ npm run dev
 
 Observe the following examples and their code:
 - [http://localhost:3000](http://localhost:3000) - Shows a basic example of using an Isomorphic Context that shares data to both server and client.
+- [http://localhost:3000/simple](http://localhost:3000/simple) - A minimal example of a server context.
 - [http://localhost:3000/nested](http://localhost:3000/nested) - Same, but with an example of nesting multiple contexts and/or using them separately.
 - [http://localhost:3000/layout](http://localhost:3000/layout) - Showcases that layouts are rendered separately from pages, and all contexts must be declared and filled with data twice (if we need them in both scopes ofc).
 - [http://localhost:3000/remote-layout](http://localhost:3000/remote-layout) - Employs a "remote hydration" strategy, where a client context is hydrated with the data from the server, but context is on layout whereas data is on page.
